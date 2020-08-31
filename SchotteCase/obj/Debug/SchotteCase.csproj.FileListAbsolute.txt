@@ -1,0 +1,6 @@
+H:\projects\SchotteCase\SchotteCase\SchotteCase\bin\Debug\SchotteCase.exe.config
+H:\projects\SchotteCase\SchotteCase\SchotteCase\bin\Debug\SchotteCase.exe
+H:\projects\SchotteCase\SchotteCase\SchotteCase\bin\Debug\SchotteCase.pdb
+H:\projects\SchotteCase\SchotteCase\SchotteCase\obj\Debug\SchotteCase.csprojAssemblyReference.cache
+H:\projects\SchotteCase\SchotteCase\SchotteCase\obj\Debug\SchotteCase.exe
+H:\projects\SchotteCase\SchotteCase\SchotteCase\obj\Debug\SchotteCase.pdb
