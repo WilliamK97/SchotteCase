@@ -13,77 +13,59 @@ namespace SchotteCase
         {
 
             bool continueProgram = true;
-
-            while (continueProgram)
-            {
-                var answers = StartGame();
-
-                CheckWinner(answers);
-
-                continueProgram = ContinueProgram();
-            }
-        }
-
-        public static List<int> StartGame()
-        {
-            List<int> answers = new List<int>();
+            var numberOfRounds = 0;
 
             Console.WriteLine("Welcome to Schottes guessing game!");
 
-            //Player one
-            try
-            {
-                Console.WriteLine("Player One, give me a number between 1-100!");
-                var playerOne = Convert.ToInt32(Console.ReadLine());
-                answers.Add(playerOne);
-            }
-            catch (Exception e)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(e.Message);
-                Console.ResetColor();
-            }
+            var amountOfPlayers = AmountOfPLayers();
 
-            //Player two
-            try
-            {
-                Console.WriteLine("Player Two, give me a number between 1-100!");
-                var playerTwo = Convert.ToInt32(Console.ReadLine());
-                answers.Add(playerTwo);
-            }
-            catch (Exception e)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(e.Message);
-                Console.ResetColor();
-            }
 
-            return answers;
+            while (continueProgram)
+            {
+                Game game = new Game(amountOfPlayers);
+                while (game.NumberOfRound<= 3)
+                {
+
+                    var answers = game.Guesses();
+
+                    if (answers.Any(x => x == game.CorrectAnswer))
+                    {
+                        Console.WriteLine("winner the correct answer is {0}", game.CorrectAnswer);
+                        break;
+                    }
+
+                    game.CheckClosest(answers);
+                    game.NumberOfRound++;
+                    if (game.NumberOfRound == 3)
+                    {
+                        game.CheckWinner(answers);
+                        break;
+                    }
+
+                }
+
+                continueProgram = ContinueProgram();
+
+            }
         }
 
-        public static int GenerateRandomNumber()
+        
+
+        public static int AmountOfPLayers()
         {
-            var rand = new Random();
-            return rand.Next(101);
+            Console.WriteLine("Are you playing as 2, 3 or 4 people?");
+            var amountOfPlayers = Convert.ToInt32(Console.ReadLine());
+
+            if (amountOfPlayers == 2 || amountOfPlayers == 3 || amountOfPlayers == 4)
+            {
+                return amountOfPlayers;
+
+            }
+            return AmountOfPLayers();
+
         }
 
-        public static void CheckWinner(List<int> answers)
-        {
-            try
-            {
-                var correctAnswer = GenerateRandomNumber();
-                var closest = answers.OrderBy(x => Math.Abs(correctAnswer - x)).First();
-
-                Console.WriteLine("The winner is the player who guessed number: " + closest + " The correct answer was: " + correctAnswer);
-            }
-            catch (Exception e)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Restart the program. Something went wrong!");
-                Console.ResetColor();
-            }
-
-        }
+        
 
         public static bool ContinueProgram()
         {

@@ -4,3 +4,9 @@ H:\projects\SchotteCase\SchotteCase\SchotteCase\bin\Debug\SchotteCase.pdb
 H:\projects\SchotteCase\SchotteCase\SchotteCase\obj\Debug\SchotteCase.csprojAssemblyReference.cache
 H:\projects\SchotteCase\SchotteCase\SchotteCase\obj\Debug\SchotteCase.exe
 H:\projects\SchotteCase\SchotteCase\SchotteCase\obj\Debug\SchotteCase.pdb
+C:\Users\willl\Desktop\projects\schotteCase\SchotteCase\SchotteCase\bin\Debug\SchotteCase.exe.config
+C:\Users\willl\Desktop\projects\schotteCase\SchotteCase\SchotteCase\bin\Debug\SchotteCase.exe
+C:\Users\willl\Desktop\projects\schotteCase\SchotteCase\SchotteCase\bin\Debug\SchotteCase.pdb
+C:\Users\willl\Desktop\projects\schotteCase\SchotteCase\SchotteCase\obj\Debug\SchotteCase.csprojAssemblyReference.cache
+C:\Users\willl\Desktop\projects\schotteCase\SchotteCase\SchotteCase\obj\Debug\SchotteCase.exe
+C:\Users\willl\Desktop\projects\schotteCase\SchotteCase\SchotteCase\obj\Debug\SchotteCase.pdb
